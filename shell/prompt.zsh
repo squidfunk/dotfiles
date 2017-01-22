@@ -23,9 +23,9 @@ autoload colors && colors
 
 # Build git prompt
 git_super_status() {
-	precmd_update_git_vars
+  precmd_update_git_vars
   if [ -n "$__CURRENT_GIT_STATUS" ]; then
-	  STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$ZSH_THEME_GIT_PROMPT_SEPARATOR"
+    STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$ZSH_THEME_GIT_PROMPT_SEPARATOR"
 
     # Color branch name depending on state of repository
     if [ "$GIT_UNTRACKED" -ne "0" ]; then
@@ -34,54 +34,54 @@ git_super_status() {
       STATUS="$STATUS%{$fg_bold[yellow]%}$GIT_BRANCH%{${reset_color}%}"
     else
       STATUS="$STATUS%{$fg_bold[green]%}$GIT_BRANCH%{${reset_color}%}"
-	  fi
+    fi
 
     # Show how local and remote repository have diverged
-	  if [ "$GIT_BEHIND" -ne "0" ]; then
-		  STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
+    if [ "$GIT_BEHIND" -ne "0" ]; then
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
       STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_BEHIND"
       STATUS="$STATUS$GIT_BEHIND%{${reset_color}%}"
-	  fi
-	  if [ "$GIT_AHEAD" -ne "0" ]; then
+    fi
+    if [ "$GIT_AHEAD" -ne "0" ]; then
       STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
-		  STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD"
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_AHEAD"
       STATUS="$STATUS$GIT_AHEAD%{${reset_color}%}"
-	  fi
+    fi
 
     # Show number of staged files
-	  if [ "$GIT_STAGED" -ne "0" ]; then
+    if [ "$GIT_STAGED" -ne "0" ]; then
       STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
-		  STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STAGED"
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STAGED"
       STATUS="$STATUS$GIT_STAGED"
-	  fi
+    fi
 
     # Show number of files with conflicts
-	  if [ "$GIT_CONFLICTS" -ne "0" ]; then
+    if [ "$GIT_CONFLICTS" -ne "0" ]; then
       STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
-		  STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CONFLICTS"
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CONFLICTS"
       STATUS="$STATUS$GIT_CONFLICTS"
-	  fi
+    fi
 
     # Show number of changed files
-	  if [ "$GIT_CHANGED" -ne "0" ]; then
+    if [ "$GIT_CHANGED" -ne "0" ]; then
       STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
-		  STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CHANGED"
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CHANGED"
       STATUS="$STATUS$GIT_CHANGED"
-	  fi
+    fi
 
     # Show that there are untracked files
-	  if [ "$GIT_UNTRACKED" -ne "0" ]; then
+    if [ "$GIT_UNTRACKED" -ne "0" ]; then
       if [ "$GIT_STAGED" -eq "0" ] && [ "$GIT_CONFLICTS" -eq "0" ] &&
          [ "$GIT_CHANGED" -eq "0" ]; then
         STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_SEPARATOR"
       fi
-		  STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_UNTRACKED"
-	  fi
+      STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_UNTRACKED"
+    fi
 
     # Append suffix
-	  STATUS="$STATUS%{${reset_color}%}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-	  echo "$STATUS"
-	fi
+    STATUS="$STATUS%{${reset_color}%}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+    echo "$STATUS"
+  fi
 }
 
 # Configuration
