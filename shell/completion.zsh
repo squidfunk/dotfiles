@@ -61,8 +61,8 @@ if [[ -f $HOME/.ssh/config ]]; then
 fi
 
 # Docker
-# zstyle ':completion:*:*:docker:*' option-stacking yes
-# zstyle ':completion:*:*:docker-*:*' option-stacking yes
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # Colors in completion
 zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS}

@@ -54,7 +54,9 @@ alias desktop-show="defaults write com.apple.finder CreateDesktop \
   -bool true && killall Finder"
 
 # Docker cleanup
-alias docker-stop-all="docker rm -f $(docker ps -a -q)"
+alias docker-stop-all="docker rm -f $(docker ps -q -a)"
+alias docker-remove-dangling=" \
+  docker rmi -f $(docker images -q -f dangling=true)"
 alias docker-remove-all="docker rmi -f $(docker images -q)"
 alias docker-purge=" \
   docker-stop-all && \
