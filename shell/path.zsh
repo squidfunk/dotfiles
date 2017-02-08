@@ -21,3 +21,6 @@
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+# Yarn
+export PATH="$PATH:`yarn global bin`"
