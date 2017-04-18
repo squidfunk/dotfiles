@@ -18,12 +18,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Homebrew
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-
-# Yarn
-export PATH="$PATH:`yarn global bin`"
-
-# Golang
-export PATH="$PATH:$HOME/go/bin"
+# Initialize kiex
+if [ -d "$HOME/.kiex" ]; then
+  source $HOME/.kiex/scripts/kiex
+fi
