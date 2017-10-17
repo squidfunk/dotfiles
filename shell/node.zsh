@@ -23,3 +23,9 @@ if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR=$HOME/.nvm
   source $NVM_DIR/nvm.sh
 fi
+
+# Initialize avn, automatic version switcher
+if [ -d "$HOME/.avn" ]; then
+  export NVM_DIR=$HOME/.nvm
+  source $HOME/.avn/bin/avn.sh
+fi

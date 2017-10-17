@@ -35,8 +35,7 @@ fresh shell/aliases.zsh
 fresh shell/completion.zsh
 fresh shell/history.zsh
 fresh shell/bindings.zsh
-fresh shell/kiex.zsh
-fresh shell/nvm.zsh
+fresh shell/node.zsh
 fresh shell/path.zsh
 fresh shell/prompt.zsh
 fresh shell/rbenv.zsh
