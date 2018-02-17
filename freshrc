@@ -30,11 +30,12 @@ fresh zsh-users/zsh-history-substring-search . \
   --file=zsh-history-substring-search/
 
 # Load modules
-fresh shell/env.zsh
 fresh shell/aliases.zsh
-fresh shell/completion.zsh
-fresh shell/history.zsh
 fresh shell/bindings.zsh
+fresh shell/completion.zsh
+fresh shell/env.zsh
+fresh shell/go.zsh
+fresh shell/history.zsh
 fresh shell/node.zsh
 fresh shell/path.zsh
 fresh shell/prompt.zsh
