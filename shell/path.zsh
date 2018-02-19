@@ -23,7 +23,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 # Yarn
-export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:`npm global bin`"
 
 # Golang
 export PATH="$PATH:$HOME/go/bin"
