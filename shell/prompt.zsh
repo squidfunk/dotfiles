@@ -24,7 +24,7 @@ autoload colors && colors
 # Build git prompt
 git_super_status() {
   precmd_update_git_vars
-  if [ -n "$__CURRENT_GIT_STATUS" ]; then
+  if [ "$GIT_BRANCH" != ":" ]; then
     STATUS="$ZSH_THEME_GIT_PROMPT_PREFIX$ZSH_THEME_GIT_PROMPT_SEPARATOR"
 
     # Color branch name depending on state of repository
