@@ -27,8 +27,3 @@ export PATH="$PATH:`npm bin -g`"
 
 # Golang
 export PATH="$PATH:$HOME/go/bin"
-
-# Python
-if [ -d "$HOME/Library/Python/3.6/bin" ]; then
-  export PATH="$PATH:$HOME/Library/Python/3.6/bin"
-fi
