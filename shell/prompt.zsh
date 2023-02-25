@@ -85,8 +85,8 @@ git_super_status() {
 }
 
 # Configuration
-ZSH_THEME_GIT_PROMPT_PREFIX="%{${fg_bold[black]}%}[%{${reset_color}%}git"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{${fg_bold[black]}%}]%{${reset_color}%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="git"
+ZSH_THEME_GIT_PROMPT_SUFFIX=" "
 ZSH_THEME_GIT_PROMPT_SEPARATOR="%{${fg_bold[black]}%}:%{${reset_color}%}"
 ZSH_THEME_GIT_PROMPT_BRANCH="%{${fg_bold[magenta]}%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{${fg_bold[green]}%}%{*%G%}"
@@ -99,8 +99,8 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{…%G%}"
 # Define prompt including git status
 PS1="%{${fg_bold[blue]}%}%n%{${reset_color}%}@%m%{${reset_color}%} "
 # PS1=$PS1'%{${fg_bold[black]}%}$(date +"%b %d %H:%M") '
-PS1=$PS1"%{${fg_bold[black]}%}%1d%{${reset_color}%}"
-PS1=$PS1'$(git_super_status) '
+PS1=$PS1"%{${fg_bold[black]}%}%2d%{${reset_color}%} "
+PS1=$PS1'$(git_super_status)'
 PS1=$PS1"$ "
 
 # Export prompt
