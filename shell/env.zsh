@@ -25,7 +25,7 @@ export HIST_STAMPS="dd.mm.yy"
 export CLICOLOR=1
 
 # Set language to English
-export LANG=en_US
+export LANG="en_US.UTF-8"
 
 # Fix GnuPG, see https://github.com/keybase/keybase-issues/issues/2798
 export GPG_TTY=$(tty)
