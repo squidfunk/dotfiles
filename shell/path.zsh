@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2017-2023 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -18,12 +18,14 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Homebrew
+# Set path for go
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# Set path for n
+export N_PREFIX=$HOME/.n
+export PATH=$PATH:$N_PREFIX/bin
+
+# User-level executables
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-
-# NPM
-export PATH="$PATH:`npm bin -g`"
-
-# Golang
-export PATH="$PATH:$HOME/go/bin"

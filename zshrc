@@ -5,7 +5,6 @@ source $HOME/.fresh/build/zsh-history-substring-search/zsh-history-substring-sea
 source $HOME/.fresh/build/shell.sh
 
 fpath=($HOME/.fresh/build/zsh-completions/src $fpath)
-# TODO: this is rather ugly, but it works for now
 fpath=($HOME/.dotfiles/src/completions $fpath)
 
 autoload -U compinit

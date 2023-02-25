@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2017-2023 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -85,22 +85,22 @@ git_super_status() {
 }
 
 # Configuration
-ZSH_THEME_GIT_PROMPT_PREFIX="git"
-ZSH_THEME_GIT_PROMPT_SUFFIX=" "
-ZSH_THEME_GIT_PROMPT_SEPARATOR="%{$fg_bold[black]%}:%{${reset_color}%}"
-ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
-ZSH_THEME_GIT_PROMPT_STAGED="%{$fg_bold[green]%}%{*%G%}"
-ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg_bold[red]%}%{×%G%}"
-ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg_bold[red]%}%{+%G%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{${fg_bold[black]}%}[%{${reset_color}%}git"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{${fg_bold[black]}%}]%{${reset_color}%}"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="%{${fg_bold[black]}%}:%{${reset_color}%}"
+ZSH_THEME_GIT_PROMPT_BRANCH="%{${fg_bold[magenta]}%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{${fg_bold[green]}%}%{*%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{${fg_bold[red]}%}%{×%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{${fg_bold[red]}%}%{+%G%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{↓%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{↑%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{…%G%}"
 
 # Define prompt including git status
-PS1='%{${fg[cyan]}%}%n%{${reset_color}%}@%{${fg[green]}%}%m%{${reset_color}%}:'
-PS1=$PS1'%{${fg_bold[black]}%}%~%{${reset_color}%} '
-PS1=$PS1'$(git_super_status)'
-PS1=$PS1'> '
+PS1="%{${fg_bold[blue]}%}%n%{${reset_color}%}@%m%{${reset_color}%} "
+PS1=$PS1"%{${fg_bold[black]}%}%1d%{${reset_color}%}"
+PS1=$PS1'$(git_super_status) '
+PS1=$PS1"$ "
 
 # Export prompt
 export PS1

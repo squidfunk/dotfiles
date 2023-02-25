@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2017-2023 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -18,5 +18,22 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Export workspace for go
-export GOPATH=$HOME/.go
+# Simple navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Ring the bell and put a badge on Terminal.app when in background
+alias done="tput bel"
+
+# Refresh shell
+alias refresh="fresh && source $HOME/.zshrc && reset"
+
+# Hide/show all desktop icons (useful when presenting)
+alias desktop-hide=" \
+  defaults write com.apple.finder CreateDesktop -bool false && \
+  killall Finder"
+alias desktop-show=" \
+  defaults write com.apple.finder CreateDesktop -bool true && \
+  killall Finder"

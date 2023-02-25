@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2017-2023 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -30,13 +30,10 @@ fresh zsh-users/zsh-history-substring-search . \
   --file=zsh-history-substring-search/
 
 # Load modules
-fresh shell/aliases.zsh
-fresh shell/bindings.zsh
+fresh shell/alias.zsh
+fresh shell/binding.zsh
 fresh shell/completion.zsh
 fresh shell/env.zsh
-fresh shell/go.zsh
 fresh shell/history.zsh
-fresh shell/node.zsh
 fresh shell/path.zsh
 fresh shell/prompt.zsh
-fresh shell/rbenv.zsh

@@ -1,4 +1,4 @@
-# Copyright (c) 2017 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2017-2023 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -24,7 +24,8 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HIST_STAMPS="dd.mm.yy"
 export CLICOLOR=1
 
-# Cache for zsh
-if [[ -z "$ZSH_CACHE_DIR" ]]; then
-  ZSH_CACHE_DIR="$HOME/.zsh_cache"
-fi
+# Set language to English
+export LANG=en_US
+
+# Fix GnuPG, see https://github.com/keybase/keybase-issues/issues/2798
+export GPG_TTY=$(tty)
