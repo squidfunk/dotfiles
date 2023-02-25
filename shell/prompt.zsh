@@ -98,8 +98,8 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{…%G%}"
 
 # Define prompt including git status
 PS1="%{${fg_bold[blue]}%}%n%{${reset_color}%}@%m%{${reset_color}%} "
-PS1=$PS1'%{${fg_bold[black]}%}$(date +"%b %d %H:%M") '
-PS1=$PS1"%{${reset_color}%}%1d"
+# PS1=$PS1'%{${fg_bold[black]}%}$(date +"%b %d %H:%M") '
+PS1=$PS1"%{${fg_bold[black]}%}%1d%{${reset_color}%}"
 PS1=$PS1'$(git_super_status) '
 PS1=$PS1"$ "
 
