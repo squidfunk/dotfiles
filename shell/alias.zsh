@@ -24,6 +24,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# Alias VS Code to VS Code Insiders
+alias code="code-insiders"
+
 # Ring the bell and put a badge on Terminal.app when in background
 alias done="tput bel"
 

@@ -22,6 +22,9 @@
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# Set path for python
+export PYTHONPATH=$PYTHONPATH:.
+
 # Set path for n
 export N_PREFIX=$HOME/.n
 export PATH=$PATH:$N_PREFIX/bin
