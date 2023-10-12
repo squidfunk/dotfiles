@@ -25,7 +25,7 @@ export HIST_STAMPS="dd.mm.yy"
 export CLICOLOR=1
 
 # Enable source maps in Node.js
-export NODE_OPTIONS="--enable-source-maps"
+export NODE_OPTIONS="--enable-source-maps --no-warnings=ExperimentalWarning"
 
 # Set language to English
 export LANG="en_US.UTF-8"
